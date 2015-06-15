@@ -40,7 +40,7 @@ main()
     pipe(pipes[PARENT_READ_PIPE]);
     pipe(pipes[PARENT_WRITE_PIPE]);
      
-    if(!forkpty()) {
+    if(!fork()) {
         char *argv[]={ "/bin/bash","--login", 0};
  
         dup2(CHILD_READ_FD, STDIN_FILENO);
