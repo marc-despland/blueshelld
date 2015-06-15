@@ -73,6 +73,7 @@ int main(void) {
 
 	/* Loop to manage client connection */
 	while (1) {
+		printf("Start listening\n");
 		// accept one connection
 		client = accept(s, (struct sockaddr *)&rem_addr, &opt);
 
